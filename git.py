@@ -16,7 +16,7 @@ def git_api():
         while i < 5:
             
             ranks = [['第' + str(i + 1) + '位   ユーザー名: ' + data.get('items')[i].get('name')], ['スター獲得数:  ' + str(data.get('items')[i].get('stargazers_count'))]]
-            time.sleep(7)
+            time.sleep(3)
             i += 1
             ranks = str(ranks).replace('[','').replace(']','')
             ranks = str(ranks).replace('\'','').replace('\'','')
