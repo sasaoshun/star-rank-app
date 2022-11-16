@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<div class="card text-center" style="margin: 150px;">
+    
+{% for result in results %}
+    
+       <h3>{{ result }}</h3> 
+     
+{% endfor %}
+
+<form action="/">
+    <button class="btn btn-secondary" type="submit">戻る</button>
+</form>
+</div>   
+{% endblock %}

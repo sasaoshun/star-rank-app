@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<div class="text-center" style="margin: 150px;">
+  <div class="container">
+<h1>Github Star Rank</h1>
+<h2 style="margin: 50px;">2022年月刊スターゲイザー獲得数ランキング</h2>
+
+<form method="post" action="/results">
+  <select name="rank_git">
+    <option value="2022-09">2022-09</option>
+    <option value="2022-08">2022-08</option>
+    <option value="2022-07">2022-07</option>
+    <option value="2022-06">2022-06</option>
+    <option value="2022-05">2022-05</option>
+    <option value="2022-04">2022-04</option>
+    <option value="2022-03">2022-03</option>
+    <option value="2022-02">2022-02</option>
+    <option value="2022-01">2022-01</option>
+    </select>
+      <input class="btn btn-primary" type="submit" value="ポチッとな">
+</form>
+</div>
+</div>
+
+
+      
+
+
+
+{% endblock %}
