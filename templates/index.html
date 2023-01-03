@@ -1,25 +1,50 @@
 {% extends 'base.html' %}
 
 {% block body %}
-<div class="text-center" style="margin: 150px;">
-  <div class="container">
-<h1>Github Star Rank</h1>
-<h2 style="margin: 50px;">2022年月刊スターゲイザー獲得数ランキング</h2>
+<div class="text-center">
+  <img class="card-img" width="100%" height="500px" src={{ back_pic }}>
+  <h1 class="card-img-overlay" style="padding: 140px">Github Star Rank</h1>
+  <p class="card-img-overlay" style="padding: 240px">GitHubのスターはリポジトリやトピックを後から見つけやすくするブックマーク機能ですが、優れたソースに対する「いいね」の役割も果たしてます。
+    このアプリケーションはスターの獲得数を元に2022年の月別人気リポジトリーをTop5形式で検索できるサイトです。
+    人気リポジトリーやトレンド傾向を調べる時にご活用ください。
+  </p>
+</div>
 
-<form method="post" action="/results">
-  <select name="rank_git">
-    <option value="2022-09">2022-09</option>
-    <option value="2022-08">2022-08</option>
-    <option value="2022-07">2022-07</option>
-    <option value="2022-06">2022-06</option>
-    <option value="2022-05">2022-05</option>
-    <option value="2022-04">2022-04</option>
-    <option value="2022-03">2022-03</option>
-    <option value="2022-02">2022-02</option>
-    <option value="2022-01">2022-01</option>
+<div class="text-center card border-0" style="margin: 50px 160px;">
+    <div class="card-img-overlay" style="max-width: 1100px;">
+    <div class="col">
+    <img class="card-img" src={{ img_path }}>
+    <h4 class="card-img-overlay text-light" style="padding: 250px 210px">スターランキングで2022年の人気リポジトリーを見つけよう</h4>
+    <h2 class="card-img-overlay text-light" style="padding: 170px;">2022年月刊スターゲイザー獲得数ランキング</h2>
+
+<form class="card-img-overlay text_center" style="margin: 0%;  padding: 370px" method="post" action="/results">
+  <select class="col" name="rank_git">
+    <option class="col" value="2022-12">2022-12</option>
+    <option class="col" value="2022-11">2022-11</option>
+    <option class="col" value="2022-10">2022-10</option>
+    <option class="col" value="2022-09">2022-09</option>
+    <option class="col" value="2022-08">2022-08</option>
+    <option class="col" value="2022-07">2022-07</option>
+    <option class="col" value="2022-06">2022-06</option>
+    <option class="col" value="2022-05">2022-05</option>
+    <option class="col" value="2022-04">2022-04</option>
+    <option class="col" value="2022-03">2022-03</option>
+    <option class="col" value="2022-02">2022-02</option>
+    <option class="col" value="2022-01">2022-01</option>
     </select>
-      <input class="btn btn-primary" type="submit" value="ポチッとな">
+ 
+    <select class="col" name="rank_lauguage">
+      <option class="col" value="Python">Python</option>
+      <option class="col" value="Javascript">Javascript</option>
+      <option class="col" value="PHP">PHP</option>
+      <option class="col" value="Ruby">Ruby</option>
+      <option class="col" value="Java">Java</option>
+      <option class="col" value="Go">Go</option>
+      <option class="col" value="C">C</option>
+      </select>
+  <input class="btn btn-primary col btn-outline-light" type="submit" value="Click">
 </form>
+</div>
 </div>
 </div>
 

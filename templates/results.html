@@ -1,16 +1,20 @@
 {% extends 'base.html' %}
 
 {% block body %}
-<div class="card text-center" style="margin: 150px;">
-    
-{% for result in results %}
-    
-       <h3>{{ result }}</h3> 
-     
-{% endfor %}
 
-<form action="/">
-    <button class="btn btn-secondary" type="submit">戻る</button>
+<img class="card-img" height="700px" style='margin: 0' src='./img/univers.png'>
+
+<div class="card-img-overlay text-center" style="margin: 80px;">
+{% for result, links in git_links %}
+    <h2><a style="color: black;" href="{{ links }}">{{ result }}</a></h2>
+    <br>
+{% endfor %}  
+<p>文字をクリックすると詳細ページを開きます</p>
+
+<form class="text_center" style="margin: 10px;" action="/">
+    <button class="btn btn-secondary col btn-outline-light" type="submit">戻る</button>
 </form>
-</div>   
+</div>
+
+
 {% endblock %}
